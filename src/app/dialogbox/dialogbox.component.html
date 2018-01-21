@@ -1,0 +1,7 @@
+<a href="#" (click)="visible = !visible" class="btn">{{dialogData.reqNo}}</a>
+<div *ngIf="visible" class="dialog" dragScroll>
+    <ng-content></ng-content>
+    <div class="dialog-header">Request ID: {{dialogData.reqNo}}</div>
+    <button *ngIf="closable" (click)="close()" aria-label="Close" class="dialog__close-btn">X</button>
+  </div>
+  <div *ngIf="visible" class="overlay"></div>

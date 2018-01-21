@@ -1,0 +1,12 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Dialog Box
+  </h1>
+</div>
+
+<ul>
+  <li *ngFor="let req of reqList; index as i" [attr.data-index]="i">
+    <app-dialogbox [(dialogData)]="reqList[i]"></app-dialogbox>
+  </li>
+</ul>
