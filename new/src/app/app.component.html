@@ -1,0 +1,43 @@
+<div class="app">
+<table class="table-striped table-bordered">
+  <tr>
+    <th>
+      Name
+    </th>
+    <th>
+      Conf#
+    </th>
+    <th>
+      Submitted
+    </th>
+    <th>
+      Status
+    </th>
+    <th>
+      Review
+    </th>
+  </tr>
+  <tr *ngFor="let item of itemList">
+    <td style="cursor: pointer" (click)="openDialog(item)" data-toggle="modal" data-target="#dialogBox" data-backdrop="static" data-keyboard="false">
+      {{item.name}}
+    </td>
+    <td>
+      {{item.confId}}
+    </td>
+    <td>
+      {{item.submittedDate}}
+    </td>
+    <td>
+      {{item.status}}
+    </td>
+    <td>
+      <button type="button" class="btn btn-primary" (click)="openDialog(item)" data-toggle="modal" data-target="#dialogBox" data-backdrop="static" data-keyboard="false">
+        View
+      </button>
+    </td>
+  </tr>
+</table>
+
+<app-dialog-box [title]="dialogTitle" [item]="selectedItem"></app-dialog-box>
+
+</div>

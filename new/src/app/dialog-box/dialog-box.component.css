@@ -1,0 +1,32 @@
+.modal-overlay {
+    background-color: rgba(255,255,255,0.85);
+ }
+.dialog-box-content{
+    padding: 10px 15px;
+    box-shadow: 0 2px 10px #7a7a7a;
+}
+.section-padding{
+    padding-top: 15px;
+}
+.dialog-box-drag{
+    cursor: move;
+}
+.modal-title, .close, h5, a{
+    color: #0751A6;
+}
+tr:nth-child(even) {background-color: #f2f2f2;}
+th,td{
+    padding: 5px 5px 0px 5px;
+}
+h4, h5{
+    font-size: large;
+}
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+  }

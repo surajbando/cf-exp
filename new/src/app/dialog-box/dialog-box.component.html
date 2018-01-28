@@ -1,0 +1,64 @@
+<!-- The Modal -->
+<div class="modal modal-overlay" id="dialogBox" (mouseup)="closeDragElement($event)">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content dialog-box-content" #draggable>
+
+      <!-- Modal Header -->
+      <div class="modal-header dialog-box-drag noselect" (mousedown)="dragMouseDown($event)" (mousemove)="elementDrag($event)">
+        <h4 class="modal-title">{{title}}</h4>
+        <button type="button" class="close" data-dismiss="modal">
+          <span>&times;</span>
+        </button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <div class="section-padding">
+          <h5>
+            Requestor Details
+          </h5>
+          <table class="table-bordered col-sm-12 col-md-12 col-lg-12">
+            <tr>
+              <th>Full Name:</th>
+              <td>{{item?item.fullName:""}}</td>
+            </tr>
+            <tr>
+              <th>Phone:</th>
+              <td>{{item?item.phoneNo:""}}</td>
+            </tr>
+            <tr>
+              <th>Email:</th>
+              <td>
+                <a [attr.href]="item?'mailto:' +item.emailId:''">{{item?item.emailId:""}}</a>
+              </td>
+            </tr>
+            <tr>
+              <th>Role:</th>
+              <td>{{item?item.role:""}}</td>
+            </tr>
+            <tr>
+              <th>Job Title:</th>
+              <td>{{item?item.jobTitle:""}}</td>
+            </tr>
+            <tr>
+              <th>Date Submitted:</th>
+              <td>{{item?item.submittedDate:""}}</td>
+            </tr>
+          </table>
+        </div>
+        <div class="section-padding">
+          <h5>
+            Response
+          </h5>
+          <table class="col-sm-12 col-md-12 col-lg-12">
+            <tr>
+              <th>Status:</th>
+              <td>{{item?item.statusDetail:""}}</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

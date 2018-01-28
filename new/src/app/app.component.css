@@ -1,0 +1,10 @@
+.app{
+    font-size: small;
+}
+button{
+    color: white;
+    background-color: #0751A6;
+}
+th,td{
+    padding: 5px 5px 0px 5px;
+}
